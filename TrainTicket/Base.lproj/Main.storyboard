@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-gx-nXG">
+                                <rect key="frame" x="0.0" y="54" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="444118298.93472701">
+                                    <!--2015-01-28 06:11:38 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSt-5v-hZy">
+                                <rect key="frame" x="285" y="260" width="30" height="30"/>
+                                <state key="normal" title="刷新">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hAc-aI-Rpg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14o-yy-87z">
+                                <rect key="frame" x="162" y="329" width="253" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Pij-gx-nXG" secondAttribute="centerX" id="7HL-EX-v2j"/>
+                            <constraint firstAttribute="centerY" secondItem="GSt-5v-hZy" secondAttribute="centerY" constant="25" id="A5t-VE-fcW"/>
+                            <constraint firstAttribute="centerY" secondItem="14o-yy-87z" secondAttribute="centerY" constant="-39.5" id="Gki-7A-bGm"/>
+                            <constraint firstAttribute="centerX" secondItem="GSt-5v-hZy" secondAttribute="centerX" id="QmP-fJ-c9C"/>
+                            <constraint firstAttribute="centerY" secondItem="Pij-gx-nXG" secondAttribute="centerY" constant="165" id="fmn-xX-963"/>
+                            <constraint firstAttribute="centerX" secondItem="14o-yy-87z" secondAttribute="centerX" constant="11.5" id="jg8-1m-GXy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Pij-gx-nXG" id="L8Z-bf-4OR"/>
+                        <outlet property="refreshButton" destination="GSt-5v-hZy" id="paJ-rY-MzA"/>
+                        <outlet property="resultLabel" destination="14o-yy-87z" id="Q8J-lJ-dEV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
